@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechSavant Blog - Latest Insights on Technology and Innovation">
+    <title>Blog - TechSavant</title>
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- HEADER & NAVIGATION -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html#home">TechSavant</a>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="index.html#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#services" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="team.html" class="nav-link">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link active">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Dark Mode Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <!-- Hamburger Menu for Mobile -->
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BLOG HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-hero-title">Our Blog</h1>
+            <p class="page-hero-subtitle">Insights, tutorials, and news from the world of technology</p>
+        </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <article class="blog-card featured">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=500&fit=crop" alt="AI Revolution">
+                        <div class="blog-badge">Featured</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> January 15, 2025</span>
+                            <span class="blog-category">AI & Machine Learning</span>
+                        </div>
+                        <h2 class="blog-title">The Future of AI in Business: Trends to Watch in 2025</h2>
+                        <p class="blog-excerpt">Explore how artificial intelligence is transforming businesses and what trends will shape the industry in the coming year. From automation to predictive analytics, discover the opportunities ahead.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop" alt="Cloud Computing">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> January 10, 2025</span>
+                            <span class="blog-category">Cloud Solutions</span>
+                        </div>
+                        <h2 class="blog-title">Cloud Migration Best Practices: A Complete Guide</h2>
+                        <p class="blog-excerpt">Learn the essential strategies for successfully migrating your infrastructure to the cloud. Avoid common pitfalls and ensure a smooth transition.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Web Development">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> January 5, 2025</span>
+                            <span class="blog-category">Web Development</span>
+                        </div>
+                        <h2 class="blog-title">Modern Web Development: React vs Vue vs Angular</h2>
+                        <p class="blog-excerpt">A comprehensive comparison of the three most popular JavaScript frameworks. Find out which one suits your project needs.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop" alt="Mobile Development">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> December 28, 2024</span>
+                            <span class="blog-category">Mobile Apps</span>
+                        </div>
+                        <h2 class="blog-title">Building Cross-Platform Apps with Flutter</h2>
+                        <p class="blog-excerpt">Discover how Flutter enables you to build beautiful native apps for iOS and Android from a single codebase.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop" alt="DevOps">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> December 20, 2024</span>
+                            <span class="blog-category">DevOps</span>
+                        </div>
+                        <h2 class="blog-title">CI/CD Pipelines: Streamlining Your Development Workflow</h2>
+                        <p class="blog-excerpt">Learn how continuous integration and deployment can accelerate your development process and improve code quality.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Cybersecurity">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> December 15, 2024</span>
+                            <span class="blog-category">Security</span>
+                        </div>
+                        <h2 class="blog-title">Cybersecurity Essentials for Modern Businesses</h2>
+                        <p class="blog-excerpt">Protect your digital assets with these essential cybersecurity practices. Stay ahead of threats and secure your business.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="blog-pagination">
+                <button class="pagination-btn" disabled>
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <div class="pagination-numbers">
+                    <span class="pagination-number active">1</span>
+                    <span class="pagination-number">2</span>
+                    <span class="pagination-number">3</span>
+                </div>
+                <button class="pagination-btn">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest tech insights and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="cta-button primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>TechSavant</h3>
+                    <p>Empowering innovation through smart tech solutions.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter" target="_blank" rel="noopener">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="GitHub" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechSavant. All rights reserved.</p>
+                <p style="margin-top: 0.5rem;">Made with ❤️ by Elvis Chimuse</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -40,21 +40,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==================== SMOOTH SCROLLING ====================
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
+            const href = this.getAttribute('href');
             
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const headerOffset = 70; // Height of fixed header
-                const elementPosition = targetSection.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            // Check if it's an anchor link (starts with #)
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(href);
                 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
+                if (targetSection) {
+                    const headerOffset = 70; // Height of fixed header
+                    const elementPosition = targetSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             }
+            // If it's a page link (like index.html#section), let it navigate normally
         });
     });
     
@@ -305,6 +309,48 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth'
         });
     });
+    
+    
+    // ==================== HERO STATS COUNTER ANIMATION ====================
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    function animateCounter(element) {
+        const target = parseInt(element.getAttribute('data-target'));
+        const duration = 2000; // 2 seconds
+        const increment = target / (duration / 16); // 60fps
+        let current = 0;
+        
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                element.textContent = Math.floor(current);
+                requestAnimationFrame(updateCounter);
+            } else {
+                element.textContent = target;
+            }
+        };
+        
+        updateCounter();
+    }
+    
+    // Observe hero stats for intersection
+    const heroStats = document.querySelector('.hero-stats');
+    if (heroStats) {
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    statNumbers.forEach(stat => {
+                        if (stat.textContent === '0') {
+                            animateCounter(stat);
+                        }
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        statsObserver.observe(heroStats);
+    }
     
     
     // ==================== SERVICE CARDS STAGGER ANIMATION ====================
